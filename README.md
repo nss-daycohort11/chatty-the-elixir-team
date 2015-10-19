@@ -70,3 +70,4 @@ Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/
 1. When the user presses the return key in the message field, create a `<div>` element in the DOM, below the input field that will hold all messages as they get created.
 1. The message should have a button displayed after it with the text "Delete" inside of it.
 1. When the delete button next to a message is clicked, only that message should be removed from the DOM.
+  
