@@ -1,0 +1,156 @@
+
+body{
+	min-width: 800px;
+	width:80%;
+	margin:0 auto;
+	padding: 10px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/*FLEX CONTAINER SPECS */
+
+.flex-container {
+	margin-top: 80px;
+}
+
+.flex-header {
+	flex: 1 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	color: black;
+	font-weight: bolder;
+	background-color: white;
+	border-bottom: 1px solid black;
+}
+
+
+/*END FLEX CONTAINER SPECS*/
+
+a {
+	color: black;
+	text-decoration: none;
+	font-family: "Courier New", monospace;
+}
+
+
+/*DARK THEME ADJUSTMENTS*/
+
+.dark-theme > .flex-header {
+	background-color: #2b2b2b;
+	border-bottom: 1px solid white;
+}
+
+.dark-theme a {
+	color: white;
+}
+
+.dark-theme {
+	background-color: #2b2b2b;
+	color: #a7ff9e;
+}
+
+.dark-theme div#messages {
+	border: 1px solid #141414;
+}
+
+.dark-theme hr {
+	border-color: #7F7F7F;
+}
+
+.dark-theme #null-message {
+	color: #FFC7D5;
+}
+
+/*END DARK THEME ADJUSTMENTS*/
+
+.large-text {
+	font-size: 1.5em;
+}
+
+.logo	{
+	display:inline;
+	vertical-align: middle;
+
+}
+
+#message-field {
+	width: 60%;
+	padding: 5px;
+	margin-left: 20px;	
+}
+
+#clear-button{
+	margin-left: 10px;
+
+}
+
+ul {
+	list-style-type: none;
+	margin-left: 50px;
+}
+
+ul > li {
+	display: inline;
+	margin-left: 15px; 
+}
+
+#messages{
+	border: 1px solid black;
+	height: 1000px;
+	/*width: 80%;*/
+	padding: 30px;
+	overflow-y: scroll;
+}
+
+/*SOMEHOW INDICATE THAT YOU CAN SCROLL BRO*/
+
+#utc-date {
+	font-size: .8em;
+	margin-right: 15px;
+	color: gray;
+	font-style: italic;
+}
+
+
+.initial-message {
+	font-size: .8em;
+	text-align: center;
+	color: gray;
+	font-style: italic;
+}
+
+#null-message {
+	
+	font-size: .8em;
+	color: #8F0024;
+	font-style: italic;
+}
+
+#user-message {
+	vertical-align: middle;
+	padding: 10px;
+}
+
+.user-message > button {
+	margin-left: 10px;
+}
+
+#delete {
+	clear: both;
+	float: right;
+}
+
+.hide {
+	display: none;
+}
+
+.end-message {
+	font-size: .8em;
+	text-align: center;
+	color: gray;
+	font-style: italic;
+	margin: 10px;
+}

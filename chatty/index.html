@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chatty!</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body id="everything" class="flex-container">
+			<navigation class="flex-header">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Archived Messages</a></li>
+					<li><a href="#">Private</a></li>
+				</ul>
+			</navigation>
+			<div>
+				<h2 class="logo">Chatty!</h2>
+				<input type="textbox" placeholder = "Enter message here..." required id="message-field">
+				<button id="clear-button"> Clear message board </button>
+			</div>
+			<div>
+				<ul>
+					<li>
+						<input type="checkbox" id="dark-theme"> Dark theme
+					</li>
+					<li>
+						<input type="checkbox" id="large-text"> Large text
+					</li>
+				</ul>
+			</div>	
+			<div>
+				<h3>Messages:</h3>
+				<div id="messages">
+					<p class="initial-message">End of messages.</p>
+				</div>
+			</div>
+
+
+
+			<script src="chatty.js"></script>
+</body>
+
+</html>
