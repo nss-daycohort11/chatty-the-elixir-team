@@ -24,10 +24,10 @@ var nameOfToday = dayNames[theDay];
 
 var delineatorHour;
 if (hour < 12) {
-	delineatorHour = "a.m.";
+  delineatorHour = "a.m.";
 } else {
-	hour = hour - 12;
-	delineatorHour = "p.m.";
+  hour = hour - 12;
+  delineatorHour = "p.m.";
 }
 
 
@@ -46,24 +46,22 @@ var messageBoard = document.getElementById("messages");
 var messageField = document.getElementById("message-field");
 messageField.addEventListener("keydown", function whenEnter  (keypress) {
   if (keypress.keyCode === 13) {
-  	console.log("message", messageField.value);
-  	var message = messageField.value;
-  	printMessage(message);
+    var message = messageField.value;
+    printMessage(message);
 
-  	function printMessage (message) {
-  		if (message === "") {
-  			messageBoard.innerHTML = "<div class='user-message'><span id='utc-date'>" + displayCurrentDay +"</span><span id='null-message'>You entered no message.<button id='delete'>Delete</button><hr></div>" + messageBoard.innerHTML;
-  		} else {messageBoard.innerHTML = "<div class='user-message'><span id='utc-date'>" + displayCurrentDay +"</span>" + message + "<button id='delete'>Delete</button><hr></div>" + messageBoard.innerHTML;}
-  	console.log("messageBoard within keypress enter", messageBoard);
-  	}
+    function printMessage (message) {
+      if (message === "") {
+        messageBoard.innerHTML = "<div class='user-message'><span id='utc-date'>" + displayCurrentDay +"</span><span id='null-message'>You entered no message.<button id='delete'>Delete</button><hr></div>" + messageBoard.innerHTML;
+      } else {messageBoard.innerHTML = "<div class='user-message'><span id='utc-date'>" + displayCurrentDay +"</span>" + message + "<button id='delete'>Delete</button><hr></div>" + messageBoard.innerHTML;} 
+      limitPosts();
+    }
 
 
-  	clearInput();
+    clearInput();
 
-  	function clearInput() {
-  		messageField.value = "";
-  		console.log(messageField.value);
-  	} 
+    function clearInput() {
+      messageField.value = "";
+    } 
   
   }
 
@@ -73,7 +71,7 @@ messageField.addEventListener("keydown", function whenEnter  (keypress) {
 // CLEAR WHOLE MESSAGE BOX
 
 clearButton.addEventListener("click", function () {
-	messageBoard.innerHTML = "<p class='initial-message'>End of messages.</p>";
+  messageBoard.innerHTML = "<p class='initial-message'>End of messages.</p>";
 });
 
 // DISABLED CLEAR MESSAGE BOARD BUTTON 
@@ -83,15 +81,15 @@ clearButton.addEventListener("click", function () {
 clearButton.setAttribute("disabled", true);
 
 messageField.addEventListener("keypress", function (e) {
-	if (e.keyCode === 13) {
-		document.getElementById("clear-button").removeAttribute("disabled");
-	}
+  if (e.keyCode === 13) {
+    document.getElementById("clear-button").removeAttribute("disabled");
+  }
 
 });
 
 clearButton.addEventListener("click", function (o) {
-	document.getElementById("clear-button").setAttribute("disabled", true);
-	console.log("event for clear", o);
+  document.getElementById("clear-button").setAttribute("disabled", true);
+  console.log("event for clear", o);
 });
 
 
@@ -99,23 +97,29 @@ clearButton.addEventListener("click", function (o) {
 // NOW TO DELETE MESSAGE
 
 document.querySelector("body").addEventListener("click", function (event) {
-	if (event.target.id === "delete") {
-		deletePost(event);
+  if (event.target.id === "delete") {
+    deletePost(event);
 
-	}
+  }
 });
 
 var deletePost = function(localPost) {
-	localPost.target.parentNode.remove(localPost);
+  localPost.target.parentNode.remove(localPost);
 }
 
 
+// KEEPING MESSAGE LIST UNDER A CERTAIN NUM OF POSTS
 
+function limitPosts () {
+var numberOfMessages = document.getElementsByClassName("user-message").length;
+ if (document.getElementsByClassName("user-message").length > 21) {
+   console.log("length of messages", numberOfMessages);
+   messageBoard.childNodes.item(21).remove();
+ }
+};
+console.log("limitPosts", limitPosts);
 
-
-
-
-
+// STYLING CHANGES
 
 
 var webpage = document.getElementById("everything");
@@ -128,7 +132,7 @@ var largeTextCheck = document.getElementById("large-text");
 largeTextCheck.addEventListener("click", largify);
 
 function largify () {
-	webpage.classList.toggle("large-text");
+  webpage.classList.toggle("large-text");
 }
 
 // TO MAKE DARK THEME TOGGLE
@@ -137,6 +141,6 @@ var darkThemeCheck = document.getElementById("dark-theme");
 darkThemeCheck.addEventListener("click", darkify);
 
 function darkify () {
-	webpage.classList.toggle("dark-theme");
+  webpage.classList.toggle("dark-theme");
 }
 
