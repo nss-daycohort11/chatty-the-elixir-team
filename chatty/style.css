@@ -38,35 +38,35 @@ a {
 
 /*DARK THEME ADJUSTMENTS*/
 
-.make-dark > .flex-header {
+.dark-theme > .flex-header {
 	background-color: #2b2b2b;
 	border-bottom: 1px solid white;
 }
 
-.make-dark a {
+.dark-theme a {
 	color: white;
 }
 
-.make-dark {
+.dark-theme {
 	background-color: #2b2b2b;
 	color: #a7ff9e;
 }
 
-.make-dark div#messages {
+.dark-theme div#messages {
 	border: 1px solid #141414;
 }
 
-.make-dark hr {
+.dark-theme hr {
 	border-color: #7F7F7F;
 }
 
-.make-dark #null-message {
+.dark-theme #null-message {
 	color: #FFC7D5;
 }
 
 /*END DARK THEME ADJUSTMENTS*/
 
-.make-large {
+.large-text {
 	font-size: 1.5em;
 }
 
