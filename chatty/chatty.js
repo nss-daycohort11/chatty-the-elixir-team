@@ -139,7 +139,7 @@ largeTextCheck.click(largify);
 
 function largify () {
   // ??$
-  webpage.toggle(largeTextCheck);
+  webpage.toggleClass("make-large");
 }
 
 // TO MAKE DARK THEME TOGGLE
@@ -149,7 +149,7 @@ darkThemeCheck.click(darkify);
 
 function darkify () {
   // ??$
-  webpage.toggle(darkThemeCheck);
+  webpage.toggleClass("make-dark");
 }
 
 });
