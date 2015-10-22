@@ -120,7 +120,8 @@ var numberOfMessages = $(".user-message").length;
  if (numberOfMessages > 21) {
    console.log("length of messages", numberOfMessages);
 //?? $
-   messageBoard.childNodes.item(21).remove();
+   // messageBoard.childNodes.item(21).remove();
+   messageBoard.children().slice(21).detach();
  }
 };
 console.log("limitPosts", limitPosts);
